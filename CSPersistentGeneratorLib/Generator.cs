@@ -184,7 +184,8 @@ namespace CSPersistentGeneratorLib
             }
 
             replaced = replaced.Replace("#className#", ac4y.Name).Replace("#namespaceName#", namespaceName);
-            replaced = replaced.Replace("#mainClassName#", ac4y.Name);
+            replaced = replaced.Replace("#mainClassName#", ac4y.Name).Replace("#contextPropName#", ac4y.Name + "s");
+            replaced = replaced.Replace("#valueName#", ac4y.Name.Substring(0, 1).ToLower());
 
             writeOut(replaced, ac4y.Name + "EntityMethods", outputPath + "\\PersistentMethods\\");
         }

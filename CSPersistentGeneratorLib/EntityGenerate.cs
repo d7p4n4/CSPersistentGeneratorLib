@@ -41,6 +41,7 @@ namespace CSPersistentGeneratorLib
             {
 
                 Generator.generateEntityMethods("TemplateEntityMethodsShort", package, list[x], outputPath, templatesFolder);
+                GeneratePersistentService.generatePersistentService("TemplatePersistentServiceShort", package, list[x], outputPath, templatesFolder);
             }
         }
     }
